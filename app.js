@@ -5,15 +5,15 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Serve static files
-app.use(express.static(path.join(__dirname, "../")));
+app.use(express.static(path.join(__dirname, "../public")));
 
 // Create a new SQLite database
 const db = new sqlite3.Database(":memory:");
 
 // Initialize the messages table
-db.run("CREATE TABLE messages (id INTEGER PRIMARY KEY, content TEXT
+db.run("CREATE TABLE messages (id INTEGER PRIMARY KEY, content TEXT)");
 
-    // Include necessary middleware
+// Include necessary middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
