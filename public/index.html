@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What With Myself</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="chat-history" class="chat-history">
+    <div class="chat-container">
+        <div id="message-container" class="message-container"></div>
+        <div class="input-container">
+            <input id="message-input" class="message-input" type="text" placeholder="Type your message...">
+            <button id="submit-btn" class="submit-btn">GO</button>
+        </div>
     </div>
-    <form id="chat-form" class="chat-form">
-        <input type="text" id="message" name="message" placeholder="Type your message here" required>
-        <button type="submit">Submit</button>
-    </form>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
